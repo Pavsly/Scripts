@@ -1,4 +1,5 @@
 
+--// Stuff
 _G.event = {
     train = game:GetService("ReplicatedStorage").Remotes.train
 }
@@ -26,19 +27,19 @@ _G.Teleport = {
 }
 
 
-
+--// UI Library
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker1/UI-Libraries/main/Kavo%20UI%20Lib%20-%20Modified"))()
 local Window = Library.CreateLib("Nen Thing Simulator", "DarkTheme")
+
+--// Tabs
 local Tab = Window:NewTab("AutoFarm")
 local Tab2 = Window:NewTab("Zones")
 
-
-
-
+--// Sections
 local Section = Tab:NewSection("Nen Totally Simulator")
 local Section2 = Tab2:NewSection("Nen Simulator TP")
 
-
+--// Toggles and Dropdown
 Section:NewToggle("Strength", "Strength farm", function(state)
     _G.loop = state
     if state then
@@ -78,5 +79,3 @@ end)
 Section2:NewDropdown("Training Zones", "Teleport To Stuff", _G.Teleport, function(currentOption)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = currentOption
 end)
-
-
