@@ -12,19 +12,20 @@ _G.thingsnames = {
 
 _G.Teleport = {
     ["Gym"] = CFrame.new(-456, 37, 753),
-    ["Swamp"] = CFrame.new(-931, 23, 819),
-    ["Gon's House"] = CFrame.new(-382, 37, 878),
-    ["Arm Wrestling"] = CFrame.new(-208, 20, -1072),
-    ["Nen Impact"] = CFrame.new(-535.5, -7.99999809, -882, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Swamp : 10K Durability"] = CFrame.new(-931, 23, 819),
+    ["Gon's House : 10K Strength"] = CFrame.new(-382, 37, 878),
+    ["Arm Wrestling : 30K Strength"] = CFrame.new(-208, 20, -1072),
+    ["Nen Impact : 30K Durability"] = CFrame.new(-535.5, -7.99999809, -882, 1, 0, 0, 0, 1, 0, 0, 0, 1),
     ["Willow"] = CFrame.new(-19, 30.5, -873, 1, 0, 0, 0, 1, 0, 0, 0, 1),
-    ["Mansion"] = CFrame.new(-11.7000017, 41.2750092, -1287.52991, 1, 0, 0, 0, 1, 0, 0, 0, 1),
-    ["Ice Ruins"] = CFrame.new(494, 2.90465546, -564.5, 1, 0, 0, 0, 1, 0, 0, 0, 1),
-    ["Zevil"] = CFrame.new(1128.1499, 18.6345177, 339.649994, 1, 0, 0, 0, 1, 0, 0, 0, 1),
-    ["Trick"] = CFrame.new(1182.5, 57.6345177, 763.5, 1, 0, 0, 0, 1, 0, 0, 0, 1),
-    ["Wetlands"] = CFrame.new(750, 18.6345177, 776, 1, 0, 0, 0, 1, 0, 0, 0, 1),
-    ["StandOff"] = CFrame.new(646.309998, 28.5599995, -1027.02991, 1, 0, 0, 0, 1, 0, 0, 0, 1),
-    ["Trail"] = CFrame.new(-151.399994, 21.4750099, -607.629883, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Mansion : 1M Nen"] = CFrame.new(-11.7000017, 41.2750092, -1287.52991, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Ice Ruins : 1M Durability"] = CFrame.new(494, 2.90465546, -564.5, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Zevil : 50M Durability"] = CFrame.new(1128.1499, 18.6345177, 339.649994, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Trick : 50M Strength"] = CFrame.new(1182.5, 57.6345177, 763.5, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Wetlands : 50M Nen"] = CFrame.new(750, 18.6345177, 776, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["StandOff : 1M Strength"] = CFrame.new(646.309998, 28.5599995, -1027.02991, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Trail : 1K Agility"] = CFrame.new(-151.399994, 21.4750099, -607.629883, 1, 0, 0, 0, 1, 0, 0, 0, 1),
 }
+
 
 
 --// UI Library
@@ -41,9 +42,9 @@ local Section2 = Tab2:NewSection("Nen Simulator TP")
 
 --// Toggles and Dropdown
 Section:NewToggle("Strength", "Strength farm", function(state)
-    _G.loop = state
+    _G.loop1 = state
     if state then
-        while _G.loop do
+        while _G.loop1 do
         wait(.1)
         _G.event.train:FireServer(_G.thingsnames.strength)
         end
@@ -53,9 +54,9 @@ Section:NewToggle("Strength", "Strength farm", function(state)
 end)
 
 Section:NewToggle("Durability", "Durability farm", function(state)
-    _G.loop = state
+    _G.loop2 = state
     if state then
-        while _G.loop do
+        while _G.loop2 do
             wait(.1)
             _G.event.train:FireServer(_G.thingsnames.durability)
         end
@@ -65,9 +66,9 @@ Section:NewToggle("Durability", "Durability farm", function(state)
 end)
 
 Section:NewToggle("Agility", "Agility farm", function(state)
-    _G.loop = state
+    _G.loop3 = state
     if state then
-        while _G.loop do
+        while _G.loop3 do
             wait(.1)
             _G.event.train:FireServer(_G.thingsnames.agility)
         end
