@@ -1,0 +1,23 @@
+--// key system for only 1 id/hwid only to annoy my friend :) because he uses my script hub imma put 20 linkvertise 🤣
+
+numbers = {
+  ["123"] = 1,
+  ["1234"] = 2,
+  ["123456"] = 3,
+  ["1234567"] = 4,
+  ["12345678"] = 5,
+  ["123456789"] = 6,
+  ["87456321"] = 8,
+  ["7456321"] = 9,
+  ["456321"] = 10,
+}
+
+letters = [
+  ["Mz0lQU4@NXv9>K""] = x@@n3F%A]a:/gKH,
+  ["=L3q^'LG5-Y2RLQ"] = x@@n3F%A]a:/gKH,
+  ["x@@n3F%A]a:/gKH"] = x@@n3F%A]a:/gKH,
+  ["l3x4[T(JohQ[2>5"] = x@@n3F%A]a:/gKH,
+  ["h0vvWRRvxG8ehfkjQKOO9FXxpYWD3YNW"] = x@@n3F%A]a:/gKH,
+}
+
+return troll
